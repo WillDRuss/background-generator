@@ -7,10 +7,39 @@
 <body id="gradient">
 	<h1>Background Generator</h1>
 	<h2>Current CSS Background</h2>
+
 	<input class="color1" type="color" name="color1" value="#b0ff90">
 	<input class="color2" type="color" name="color2" value="#fffff0"><br>
+
+	<div id="gradient-type">
+		<h3>1. Select linear or radial gradient style</h3>
+		<input id="linearRadio" type="radio" name="gradient-style" value="linear" checked>linear
+		<input id="radialRadio"  type="radio" name="gradient-style" value="radial">radial
+	</div>
+
+	<h3>2. Select a gradient direction</h3>
+
+	<div id="direction-options">
+		<div class="direction-inputs">
+			<span><input id="top" type="radio" name="liner-direction" value="top" checked>to top</span>
+			<span><input id="bottom" type="radio" name="liner-direction" value="bottom" checked>to bottom</span>
+			<span><input id="left" type="radio" name="liner-direction" value="left" checked>to left</span>
+			<span><input id="right" type="radio" name="liner-direction" value="right" checked>to right</span>
+		</div>
+		<div class="direction-inputs">
+			<span><input id="top-left" type="radio" name="liner-direction" value="top-left" checked>to top left</span>
+			<span><input id="bottom-left" type="radio" name="liner-direction" value="bottom-left" checked>to bottom left</span>
+			<span><input id="top-right" type="radio" name="liner-direction" value="top-right" checked>to top right</span>
+			<span><input id="bottom-right" type="radio" name="liner-direction" value="bottom-right" checked>to bottom right</span>
+		</div>
+	</div>
+
+	<h3>3. Choose colours using the buttons at the top or click the button below for a random colour scheme!</h3>
+
 	<button id="enter">Generate Random Colours</button>
-	<h3></h3>
+
+	<h3>4. Copy and paste the css code below to use this background in your project</h3>
+	<h3 id="css-output"></h3>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

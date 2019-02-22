@@ -1,9 +1,8 @@
 body {
-	font: 'Raleway', sans-serif;
+	font-family: arial;
     color: rgba(0,0,0,.5);
     text-align: center;
-    text-transform: uppercase;
-    letter-spacing: .5rem;
+    letter-spacing: .01rem;
     top: 15%;
 	background: linear-gradient(to right, red , yellow); /* Standard syntax */
 }
@@ -25,6 +24,28 @@ h3 {
     letter-spacing: 0.01rem;
 }
 
+input:hover {
+    cursor: pointer;
+}
+
+.direction-inputs {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.25rem;
+    width: 100%;
+}
+
+#gradient-type {
+    margin: 0.5rem;
+}
+
+#direction-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem 25% 0.5rem 25%;
+}
+
 #enter {
     margin: 0.5rem;
     padding: 0.25rem;
@@ -37,4 +58,8 @@ h3 {
     cursor: pointer;
     background-color: white;
     color: black;
+}
+
+#css-output {
+    font-style: italic;
 }

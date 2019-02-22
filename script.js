@@ -1,13 +1,24 @@
-const css =  document.querySelector("h3");
+const css =  document.querySelector("#css-output");
 const color1 = document.querySelector(".color1");
 const color2 = document.querySelector(".color2");
 const body = document.getElementById("gradient");
-const hexArr = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+const linearRadio = document.getElementById("linearRadio")
+const radialRadio = document.getElementById("radialRadio")
 const enter = document.getElementById("enter");
+const hexArr = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+
+
+function gradientType() {
+	if (linearRadio.checked) {
+		return 'linear-gradient(to right, '
+	} else if (radialRadio.checked) {
+		return 'radial-gradient(circle, '
+	}
+}
 
 function setGradient() {
 	body.style.background = 
-		"linear-gradient(to right, " 
+		gradientType() 
 		+ color1.value + ", " 
 		+ color2.value + ")";
 
