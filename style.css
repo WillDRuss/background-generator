@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-    font: 600 3.5rem 'Raleway', sans-serif;
+    font: 600 3.5rem 'arial', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
     text-transform: uppercase;
@@ -17,7 +17,7 @@ h1 {
 }
 
 h3 {
-	font: 900 1em 'Raleway', sans-serif;
+	font: 900 1em 'arial', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
     text-transform: none;
