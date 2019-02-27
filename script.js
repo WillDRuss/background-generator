@@ -1,20 +1,33 @@
 const css =  document.querySelector("#css-output");
 const color1 = document.querySelector(".color1");
 const color2 = document.querySelector(".color2");
+const linearDirArr = document.querySelectorAll(".lin-dir")
 const body = document.getElementById("gradient");
 const linearRadio = document.getElementById("linearRadio")
 const radialRadio = document.getElementById("radialRadio")
 const enter = document.getElementById("enter");
+const refresh = document.getElementById("refresh");
 const hexArr = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
+
+
+
+function linearGradOptions() {
+	for (elem of linearDirArr) {
+		if (elem.checked) {
+			return document.getElementById(elem.id).parentNode.innerText;
+			} 
+	}
+}
 
 
 function gradientType() {
 	if (linearRadio.checked) {
-		return 'linear-gradient(to right, '
+		return 'linear-gradient(' + linearGradOptions() +', '
 	} else if (radialRadio.checked) {
 		return 'radial-gradient(circle, '
 	}
 }
+
 
 function setGradient() {
 	body.style.background = 
@@ -50,6 +63,7 @@ function generateRandColors() {
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 enter.addEventListener("click", generateRandColors);
+refresh.addEventListener("click", setGradient);
 
 setGradient();
 

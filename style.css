@@ -28,6 +28,20 @@ input:hover {
     cursor: pointer;
 }
 
+button {
+    margin: 0.5rem;
+    padding: 0.25rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
 .direction-inputs {
     display: flex;
     justify-content: space-around;
@@ -36,17 +50,24 @@ input:hover {
 }
 
 #gradient-type {
-    margin: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem 25%;
+    border: solid 0.5px black;
+    border-radius: 10px;
 }
 
 #direction-options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 0.5rem 25% 0.5rem 25%;
+    margin: 0.5rem 25%;
+    border: solid 0.5px black;
+    border-radius: 10px;
 }
 
-#enter {
+/*#enter {
     margin: 0.5rem;
     padding: 0.25rem;
     background-color: black;
@@ -58,7 +79,7 @@ input:hover {
     cursor: pointer;
     background-color: white;
     color: black;
-}
+}*/
 
 #css-output {
     font-style: italic;
