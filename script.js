@@ -2,11 +2,18 @@ const css =  document.querySelector("#css-output");
 const color1 = document.querySelector(".color1");
 const color2 = document.querySelector(".color2");
 const linearDirArr = document.querySelectorAll(".lin-dir")
+const radialDirArr = document.querySelectorAll(".rad-dir")
+
 const body = document.getElementById("gradient");
 const linearRadio = document.getElementById("linearRadio")
 const radialRadio = document.getElementById("radialRadio")
 const enter = document.getElementById("enter");
 const refresh = document.getElementById("refresh");
+const linearOptions = document.getElementById("linear-options");
+const radialOptions = document.getElementById("radial-options");
+const circleOption = document.getElementById("circle")
+const ellipseOption = document.getElementById("ellipse")
+
 const hexArr = ["0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f"];
 
 
@@ -20,11 +27,34 @@ function linearGradOptions() {
 }
 
 
+function circleOrEllipse() {
+	if (circleOption.checked) {
+		return 'circle ';
+	} else if (ellipseOption.checked) {
+		return 'ellipse ';
+	}
+}
+
+
+function radialGradOptions() {
+	for (elem of radialDirArr) {
+		if (elem.checked) {
+			return document.getElementById(elem.id).parentNode.innerText;
+			} 
+	}
+}
+
+
 function gradientType() {
 	if (linearRadio.checked) {
+		linearOptions.style.display = 'flex'
+		radialOptions.style.display = 'none'
 		return 'linear-gradient(' + linearGradOptions() +', '
 	} else if (radialRadio.checked) {
-		return 'radial-gradient(circle, '
+		linearOptions.style.display = 'none'
+		radialOptions.style.display = 'flex'
+		return 'radial-gradient(' 
+		+ circleOrEllipse() + radialGradOptions() + ', ';
 	}
 }
 
@@ -36,7 +66,8 @@ function setGradient() {
 
 	body.style.backgroundImage = backgroundText
 
-		css.textContent = backgroundText + ":";
+		css.innerHTML = 'Hex code: ' + backgroundText + ":<br>" 
+		+ 'RGB code: ' + body.style.backgroundImage + ':' ;
 }
 
 function generateRandColors() {
@@ -65,6 +96,8 @@ color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
 enter.addEventListener("click", generateRandColors);
 refresh.addEventListener("click", setGradient);
+linearRadio.addEventListener("change", gradientType);
+radialRadio.addEventListener("change", gradientType);
 
 setGradient();
 

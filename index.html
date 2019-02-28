@@ -18,9 +18,12 @@
 		<input id="radialRadio"  type="radio" name="gradient-style" value="radial">radial
 	</div>
 
-	<h3>2. Select a gradient direction</h3>
+	<h3>2. Select gradient options</h3>
 
-	<div id="direction-options">
+
+	<!-- This code should only show when 'linear' has been chosen -->
+	<div id="linear-options">
+		<h4>Choose a direction</h4>
 		<div class="direction-inputs">
 			<span><input class="lin-dir" id="top" type="radio" name="linear-direction" value="top">to top</span>
 			<span><input class="lin-dir" id="bottom" type="radio" name="linear-direction" value="bottom" checked>to bottom</span>
@@ -34,6 +37,26 @@
 			<span><input class="lin-dir" id="bottom-right" type="radio" name="linear-direction" value="bottom-right">to bottom right</span>
 		</div>
 	</div>
+
+	<!--This code should only show when 'radial' has been chosen-->
+	<div id="radial-options">
+
+		<h4>Choose circle or ellipse</h4>
+		<div class="radial-type">
+			<span><input class="rad-type" id="circle" type="radio" name="radial-type" value="circle" checked>circle</span>
+			<span><input class="rad-type" id="ellipse" type="radio" name="radial-type" value="ellipse">ellipse</span>
+		</div>
+
+		<h4>Choose a direction</h4>
+		<div class="radial-direction">
+			<span><input class="rad-dir" id="closest-side" type="radio" name="radial-direction" value="closest-side" checked>closest-side</span>
+			<span><input class="rad-dir" id="closest-corner" type="radio" name="radial-direction" value="closest-corner">closest-corner</span>
+			<span><input class="rad-dir" id="farthest-side" type="radio" name="radial-direction" value="farthest-side">farthest-side</span>
+			<span><input class="rad-dir" id="farthest-corner" type="radio" name="radial-direction" value="farthest-corner">farthest-corner</span>
+		</div>
+		
+	</div>
+
 
 	<h3>3. Choose colours using the buttons at the top or click the button below for a random colour scheme!</h3>
 
