@@ -4,14 +4,14 @@ body {
     text-align: center;
     letter-spacing: .01rem;
     top: 15%;
-	background: linear-gradient(to right, red , yellow); /* Standard syntax */
+	background-image: linear-gradient(to right bottom, red , yellow); /* Standard syntax */
+    background-attachment: fixed;
 }
 
 h1 {
     font: 600 3.5rem 'arial', sans-serif;
     color: rgba(0,0,0,.5);
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: .5rem;
     width: 100%;
 }
@@ -22,6 +22,16 @@ h3 {
     text-align: center;
     text-transform: none;
     letter-spacing: 0.01rem;
+}
+
+h4 {
+    font: 900 0.75em 'arial', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-align: center;
+    text-transform: none;
+    letter-spacing: 0.01rem;
+    width: 100%;
+    margin: 0.5rem 0;
 }
 
 input:hover {
@@ -42,7 +52,7 @@ button:hover {
     color: black;
 }
 
-.direction-inputs {
+.direction-inputs, .radial-type, .radial-direction {
     display: flex;
     justify-content: space-around;
     margin: 0.25rem;
@@ -58,7 +68,7 @@ button:hover {
     border-radius: 10px;
 }
 
-#direction-options {
+#linear-options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,19 +77,15 @@ button:hover {
     border-radius: 10px;
 }
 
-/*#enter {
-    margin: 0.5rem;
-    padding: 0.25rem;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
+#radial-options {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.5rem 25%;
+    border: solid 0.5px black;
+    border-radius: 10px;
 }
 
-#enter:hover {
-    cursor: pointer;
-    background-color: white;
-    color: black;
-}*/
 
 #css-output {
     font-style: italic;
