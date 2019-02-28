@@ -30,12 +30,13 @@ function gradientType() {
 
 
 function setGradient() {
-	body.style.background = 
-		gradientType() 
+	let backgroundText = gradientType() 
 		+ color1.value + ", " 
 		+ color2.value + ")";
 
-		css.textContent = body.style.background + ":";
+	body.style.backgroundImage = backgroundText
+
+		css.textContent = backgroundText + ":";
 }
 
 function generateRandColors() {

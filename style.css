@@ -4,7 +4,8 @@ body {
     text-align: center;
     letter-spacing: .01rem;
     top: 15%;
-	background: linear-gradient(to right, red , yellow); /* Standard syntax */
+	background-image: linear-gradient(to right bottom, red , yellow); /* Standard syntax */
+    background-attachment: fixed;
 }
 
 h1 {
